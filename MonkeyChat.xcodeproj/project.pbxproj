@@ -11,6 +11,7 @@
 		54B1281D279729EE00CF13FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1281C279729EE00CF13FD /* ContentView.swift */; };
 		54B1281F279729EE00CF13FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1281E279729EE00CF13FD /* Assets.xcassets */; };
 		54B12822279729EE00CF13FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B12821279729EE00CF13FD /* Preview Assets.xcassets */; };
+		54B1282B27972BAA00CF13FD /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1282A27972BAA00CF13FD /* TitleRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		54B1281C279729EE00CF13FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54B1281E279729EE00CF13FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54B12821279729EE00CF13FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54B1282A27972BAA00CF13FD /* TitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				54B1281A279729EE00CF13FD /* MonkeyChatApp.swift */,
-				54B1281C279729EE00CF13FD /* ContentView.swift */,
-				54B1281E279729EE00CF13FD /* Assets.xcassets */,
+				54B128322797453000CF13FD /* Views */,
+				54B1282827972B7500CF13FD /* Components */,
+				54B128332797456C00CF13FD /* Resources */,
 				54B12820279729EE00CF13FD /* Preview Content */,
 			);
 			path = MonkeyChat;
@@ -67,6 +70,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		54B1282827972B7500CF13FD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				54B1281C279729EE00CF13FD /* ContentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		54B128322797453000CF13FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54B1282A27972BAA00CF13FD /* TitleRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		54B128332797456C00CF13FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54B1281E279729EE00CF13FD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54B12825279729EE00CF13FD /* Build configuration list for PBXNativeTarget "MonkeyChat" */;
 			buildPhases = (
+				54B1282C2797304100CF13FD /* ShellScript */,
 				54B12813279729EE00CF13FD /* Sources */,
 				54B12814279729EE00CF13FD /* Frameworks */,
 				54B12815279729EE00CF13FD /* Resources */,
@@ -132,6 +160,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54B1282C2797304100CF13FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54B12813279729EE00CF13FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +187,7 @@
 			files = (
 				54B1281D279729EE00CF13FD /* ContentView.swift in Sources */,
 				54B1281B279729EE00CF13FD /* MonkeyChatApp.swift in Sources */,
+				54B1282B27972BAA00CF13FD /* TitleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
