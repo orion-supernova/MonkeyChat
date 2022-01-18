@@ -39,6 +39,7 @@ struct TitleRow: View {
         }
         .frame(maxWidth: .infinity)
         .padding()
+        .background(.ultraThickMaterial)
     }
 }
 
